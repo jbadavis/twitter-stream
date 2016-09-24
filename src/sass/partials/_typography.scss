@@ -9,3 +9,11 @@ p {
     font-weight: 400;
     font-size: $fs-p;
 }
+
+.topic-header {
+    span, input {
+        font-family: Lato;
+        font-size: $fs-h1;
+        font-weight: 400;
+    }
+}

@@ -7,7 +7,7 @@ twitterStream.stream = (function() {
          });
 
         socket.on('tweet', function(obj){
-            $('.tweet-container').prepend('<p>'+obj+'</p>');
+            $('.tweet-container').prepend('<p class="tweet">'+obj+'</p>');
         });
     };
 
@@ -15,7 +15,7 @@ twitterStream.stream = (function() {
         $('.topic-field').keypress(function(e) {
             if(e.which == 13) {
                 topic = $('.topic-field').val();
-
+                console.log(topic);
                 connect();
             }
         });
