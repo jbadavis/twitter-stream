@@ -1,26 +1,22 @@
 twitterStream.stream = (function() {
+    var topic;
 
-    var createStream = function() {
-        $.ajax({
-            url: '/api/stream',
-            type: 'GET',
-            data: {
-              format: 'json'
-            },
-            dataType: 'json',
-            error: function() {
-              console.log('Error :(');
-            },
-            success: function(data) {
-                console.log('Success!');
-            }
+    var connect = function() {
+        var socket = io.connect('http://localhost:3000', {
+             query: "topic=" + topic
+         });
+
+        socket.on('tweet', function(obj){
+            $('.tweet-container').prepend('<p>'+obj+'</p>');
         });
     };
 
     var setListener = function() {
-        $('.topicField').keypress(function(e) {
+        $('.topic-field').keypress(function(e) {
             if(e.which == 13) {
-                createStream();
+                topic = $('.topic-field').val();
+
+                connect();
             }
         });
     };
