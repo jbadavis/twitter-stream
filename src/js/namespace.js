@@ -1,0 +1,1 @@
+var twitterStream = twitterStream || {};

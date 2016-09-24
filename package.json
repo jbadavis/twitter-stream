@@ -1,0 +1,36 @@
+{
+  "name": "twitter-stream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbadavis/twitter-stream.git"
+  },
+  "author": "Jack B A Davis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbadavis/twitter-stream/issues"
+  },
+  "homepage": "https://github.com/jbadavis/twitter-stream#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8",
+    "twit": "^2.2.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1",
+    "matchdep": "^1.0.1"
+  }
+}
